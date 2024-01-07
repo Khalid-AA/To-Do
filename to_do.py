@@ -1,6 +1,9 @@
 import functions as f
 
+# Read the content from to_do.txt file and then write it into to_do_pr_ver.txt file
+# Then read the content from to_do_pr_ver.txt file and then write it into to_do_b4_changes dictionary
 f.previous_version_to_do()
+# Read the content from to_do.txt file and then write it into to_do dictionary
 f.load_to_do_file()
 
 while True:
