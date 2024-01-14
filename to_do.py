@@ -28,8 +28,11 @@ while True:
             f.view_task()
         
         elif menu == 3:
-            rm_name = input("Enter the task to remove: ")
-            f.remove_task(rm_name)
+            if not f.to_do:
+                print("You have no tasks.")
+            else:
+                rm_name = input("Enter the task to remove: ")
+                f.remove_task(rm_name)
         
         elif menu == 4:
             if not f.to_do:
