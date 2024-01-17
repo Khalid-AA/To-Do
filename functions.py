@@ -157,8 +157,10 @@ def mark_complete():
             mark = input(f"Have you completed {j}, (Y/N): ").strip().title()
             if mark == "Y" or mark == "Yes":
                 complete[j] = [complete[j], "Completed"]
+                print(f"{j} marked as complete.")
             elif mark == "N" or mark == "No":
                 complete[j] = [complete[j], "Not_Completed"]
+                print(f"{j} marked as incomplete.")
             else:
                 print("Invalid option. Choose Y or N")
         with open("completed.txt", "w") as cw:
@@ -166,7 +168,7 @@ def mark_complete():
                 for i in complete:
                     if complete[i][1] == "Completed":
                         cw.write(f"{i} {complete[i][0]} {complete[i][1]}\n")
-                    elif complete[i][1] == "Not Completed":
+                    elif complete[i][1] == "Not_Completed":
                         iw.write(f"{i} {complete[i][0]} {complete[i][1]}\n")
 
 
