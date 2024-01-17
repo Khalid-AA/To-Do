@@ -158,7 +158,7 @@ def mark_complete():
             if mark == "Y" or mark == "Yes":
                 complete[j] = [complete[j], "Completed"]
             elif mark == "N" or mark == "No":
-                complete[j] = [complete[j], "Not Completed"]
+                complete[j] = [complete[j], "Not_Completed"]
             else:
                 print("Invalid option. Choose Y or N")
         with open("completed.txt", "w") as cw:
